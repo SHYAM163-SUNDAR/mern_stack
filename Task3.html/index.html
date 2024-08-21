@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>About Us</h2>
+        <p>This is the main landing page of our website. Navigate through the menu to explore different sections.</p>
+
+        <h3>Enter a value and add it to an array:</h3>
+        <form id="arrayForm">
+            <input type="text" id="arrayInput" placeholder="Enter something..." required>
+            <button type="submit">Add to Array</button>
+        </form>
+    </main>
+
+    <script>
+        // Initialize an empty array
+        let valuesArray = [];
+
+        // Add event listener to the form
+        document.getElementById("arrayForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the form from submitting the traditional way
+            
+            // Get the value from the textbox
+            const inputValue = document.getElementById("arrayInput").value;
+            
+            // Add the value to the array
+            valuesArray.push(inputValue);
+            
+            // Print the current state of the array in the console
+            console.log("Current Array:", valuesArray);
+            
+            // Clear the textbox for the next input
+            document.getElementById("arrayInput").value = '';
+        });
+    </script>
+</body>
+</html>
